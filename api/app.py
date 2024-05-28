@@ -9,7 +9,7 @@ def index():
         soovitud = request.form['soovitud']
         suurus = request.form['suurus']
         if soovitud and suurus:
-            failiNimi = soovitud + '-' + suurus + '.csv'
+            failiNimi = 'api/' + soovitud + '-' + suurus + '.csv'
             andmed = []
             csvfail = open(failiNimi, encoding='UTF-8')
             loetudCSV = csv.reader(csvfail, delimiter=';')
