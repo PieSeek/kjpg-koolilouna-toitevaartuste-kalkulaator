@@ -28,7 +28,7 @@ def result():
     suurus = request.form['suurus']
     lõuna = []
     for toit in andmed:
-        csv_file_path = soovitud + '-' + suurus + '.csv'
+        csv_file_path = 'api/' + soovitud + '-' + suurus + '.csv'
         csvfail = open(csv_file_path, encoding='UTF-8')
         loetudCSV = csv.reader(csvfail, delimiter=';')
         for rida in loetudCSV:
