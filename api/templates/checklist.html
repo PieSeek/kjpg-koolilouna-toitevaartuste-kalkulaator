@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vali söödud toidud</title>
+  </head>
+  <body>
+    <h1>Vali söödud toidud:</h1>
+    <form action="/result" method="post">
+      {% for toit in andmed %}
+      <input type="checkbox" id="{{ toit[0] }}" name="toit" value="{{ toit[0] }}">
+      <label for="{{ toit[0] }}">{{ toit[0] }}</label>
+      <br />
+
+      {% endfor %}
+      <input type="hidden" name="soovitud" value="{{ soovitud }}">
+      <input type="hidden" name="suurus" value="{{ suurus }}">
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
